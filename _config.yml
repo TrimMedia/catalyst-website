@@ -1,6 +1,6 @@
 # Site settings
-title: Catalyst Spaces
-email: andrew@trimm.co
+title: Catalyst
+email: info@catalystspaces.com
 description: Promotional website for Catalyst Website
 baseurl: "/catalyst-website" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
