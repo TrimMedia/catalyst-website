@@ -1,0 +1,115 @@
+/* 
+Base 
+*/
+
+html{
+	font-family: $font-default;
+	text-align: center;
+}
+
+body{
+	margin-top: 0;
+	background: $bg-color;
+	color: $text-color;
+}
+
+header,
+footer{
+	padding: 2.5rem 0;
+}
+
+h1{
+	font-size: 2rem;
+}
+
+h2{
+	font-size: 1.5rem;
+}
+
+h3{
+	font-size: 1.125rem;
+}
+
+h4{
+	font-size: .75rem;
+}
+
+ul{
+	list-style-type: none;
+}
+
+p{
+	font-size: 1rem;
+	line-height: 1.5em;
+}
+
+p > ul{
+	list-style-type: circle;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+
+	&:hover,
+	&:focus{
+		color: darken($text-color, 15%);
+	}
+}
+
+input,
+textarea,
+select,
+option,
+button,
+input[type="submit"],
+.button{
+	border: none;
+}
+
+input,
+textarea{
+	width: 100%;
+	max-width: 100%;
+	padding: .5em 1em;
+	opacity: .75;
+	outline: none;
+	border: 2px solid white;
+
+		&:focus,
+		&:active,
+		&:hover{
+			opacity: 1;
+		}
+
+		&:active,
+		&:focus{
+			border-color: blue;
+		}
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+	width: auto;
+}
+
+button,
+input[type="submit"],
+.button{
+	font-family: $font-alt;
+	font-style: italic;
+	font-weight: 500;
+	background: transparentize($black, .5);
+	color: inherit;
+	padding: .5em 1em;
+
+	&:hover{
+		background: transparentize($black, .75);
+	}
+
+	&:disabled{
+		opacity: .5;
+		cursor: default;
+	}
+}

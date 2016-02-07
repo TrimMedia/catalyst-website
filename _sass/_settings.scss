@@ -1,0 +1,25 @@
+/* 
+Settings 
+*/
+
+// color //
+$bg-color: #fff;
+$text-color: #353535;
+
+$white: $bg-color;
+$black: $text-color;
+
+// size //
+$font-size: 20px;
+$line-height: 1.5em;
+$spacing-unit: 2em;
+
+// fonts //
+$font-default: "ff-enzo-web",sans-serif;
+$font-alt: "Archer A", "Archer B";
+
+// breakpoints //
+$tablet: 600px;
+$laptop: 900px;
+$desktop: 1200px;
+$big-desktop: 1500px;

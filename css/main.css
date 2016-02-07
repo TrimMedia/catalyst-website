@@ -1,0 +1,314 @@
+/* 
+Settings 
+*/
+/* 
+Tools
+*/
+/* 
+Generic 
+*/
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased; }
+
+html,
+form,
+input,
+textarea,
+select,
+option,
+button {
+  font-family: "ff-enzo-web", sans-serif;
+  font-size: 20px;
+  line-height: 1.5em; }
+  @media screen and (min-width: 900px) {
+    html,
+    form,
+    input,
+    textarea,
+    select,
+    option,
+    button {
+      font-size: 25px; } }
+  @media screen and (min-width: 1500px) {
+    html,
+    form,
+    input,
+    textarea,
+    select,
+    option,
+    button {
+      font-size: 30px; } }
+
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+  border: none;
+  cursor: pointer; }
+
+img {
+  max-width: 100%;
+  display: block; }
+
+/* 
+Base 
+*/
+html {
+  font-family: "ff-enzo-web", sans-serif;
+  text-align: center; }
+
+body {
+  margin-top: 0;
+  background: #fff;
+  color: #353535; }
+
+header,
+footer {
+  padding: 2.5rem 0; }
+
+h1 {
+  font-size: 2rem; }
+
+h2 {
+  font-size: 1.5rem; }
+
+h3 {
+  font-size: 1.125rem; }
+
+h4 {
+  font-size: .75rem; }
+
+ul {
+  list-style-type: none; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.5em; }
+
+p > ul {
+  list-style-type: circle; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block; }
+  a:hover, a:focus {
+    color: #0f0f0f; }
+
+input,
+textarea,
+select,
+option,
+button,
+input[type="submit"],
+.button {
+  border: none; }
+
+input,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: .5em 1em;
+  opacity: .75;
+  outline: none;
+  border: 2px solid white; }
+  input:focus, input:active, input:hover,
+  textarea:focus,
+  textarea:active,
+  textarea:hover {
+    opacity: 1; }
+  input:active, input:focus,
+  textarea:active,
+  textarea:focus {
+    border-color: blue; }
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto; }
+
+button,
+input[type="submit"],
+.button {
+  font-family: "Archer A", "Archer B";
+  font-style: italic;
+  font-weight: 500;
+  background: rgba(53, 53, 53, 0.5);
+  color: inherit;
+  padding: .5em 1em; }
+  button:hover,
+  input[type="submit"]:hover,
+  .button:hover {
+    background: rgba(53, 53, 53, 0.25); }
+  button:disabled,
+  input[type="submit"]:disabled,
+  .button:disabled {
+    opacity: .5;
+    cursor: default; }
+
+/* 
+Objects
+*/
+.container {
+  width: 80%;
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto; }
+  .container--lg {
+    width: 85%;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto; }
+  @media screen and (min-width: 600px) {
+    .container {
+      width: 80%; } }
+  @media screen and (min-width: 900px) {
+    .container {
+      width: 70%; } }
+  @media screen and (min-width: 1200px) {
+    .container {
+      width: 60%; } }
+
+.row:before, .row:after {
+  content: " ";
+  display: table; }
+
+.row:after {
+  clear: both; }
+
+@media screen and (min-width: 900px) {
+  .row > .column {
+    float: left; }
+    .row > .column.full {
+      width: 100%; }
+    .row > .column.two-thirds {
+      width: 66.7%; }
+    .row > .column.half {
+      width: 50%; }
+    .row > .column.third {
+      width: 33.3%; }
+    .row > .column.fourth {
+      width: 25%; }
+  .row.-reverse > .column {
+    float: right; } }
+
+/* 
+Components
+*/
+header {
+  text-align: left; }
+  header .container {
+    max-width: 15rem; }
+
+.heading,
+.subtitle {
+  font-family: "Archer A", "Archer B";
+  font-weight: 300;
+  font-size: 1.5rem; }
+
+.heading + p {
+  margin-top: .5em;
+  opacity: .6; }
+
+.subtitle {
+  font-size: 1.125rem;
+  opacity: .4;
+  margin-top: 0.5em; }
+
+.feature {
+  overflow: hidden;
+  position: relative;
+  padding: 3rem 0;
+  /*@include media-query($tablet) {
+		& .container--lg{
+			display: flex;
+			flex-flow: row;	
+			justify-content: space-around;
+			align-items: center;	
+			min-height: 15rem;
+		}
+
+		& .container{
+			max-width: 14rem;
+			margin: 0;
+		}
+	}*/ }
+  .feature p {
+    text-align: left; }
+  .feature img {
+    margin-bottom: 1rem; }
+  .feature--concave:before {
+    content: '';
+    display: block;
+    width: 110%;
+    height: 2rem;
+    background: white;
+    position: absolute;
+    top: -1rem;
+    left: -5%;
+    border-radius: 100%; }
+  .feature--concave:after {
+    content: '';
+    display: block;
+    width: 110%;
+    height: 2rem;
+    background: white;
+    position: absolute;
+    bottom: -1rem;
+    left: -5%;
+    border-radius: 100%; }
+  .feature--purple, .feature--green {
+    color: #fff; }
+  .feature--purple {
+    background: -webkit-linear-gradient(#B459C2, #875DC2);
+    background: linear-gradient(#B459C2, #875DC2); }
+  .feature--green {
+    background: -webkit-linear-gradient(#66CCBB, #56CC91);
+    background: linear-gradient(#66CCBB, #56CC91); }
+    .feature--green p {
+      opacity: .8; }
+
+#mood-ribbon {
+  padding-top: 9rem; }
+  #mood-ribbon img {
+    width: 29em;
+    max-width: none;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
+
+footer img {
+  margin: 0 auto; }
+
+.download, .download--small {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2em;
+  max-width: 9rem; }
+  .download--small {
+    margin-top: 1.5em;
+    max-width: 7rem; }
+
+.as-logo {
+  max-width: 6em;
+  margin-top: 2em; }
+
+.copyright {
+  font-family: "Archer A", "Archer B";
+  font-size: .75em;
+  font-weight: 300;
+  margin: 0;
+  opacity: .4; }
+
+/* 
+Trumps & Hacks 
+*/
+.u-nowrap {
+  white-space: nowrap; }
+
+.u-hidden {
+  display: none; }

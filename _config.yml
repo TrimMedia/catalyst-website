@@ -1,0 +1,11 @@
+# Site settings
+title: Catalyst Spaces
+email: andrew@trimm.co
+description: Promotional website for Catalyst Website
+baseurl: "/catalyst-website" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+
+exclude: ['node_modules','package.json','gruntfile.js']
