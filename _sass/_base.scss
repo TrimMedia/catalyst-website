@@ -3,35 +3,35 @@ Base
 */
 
 html{
-	font-family: $font-default;
+	font-family: $font;
 	text-align: center;
+	font-weight: 500
 }
 
 body{
 	margin-top: 0;
-	background: $bg-color;
-	color: $text-color;
+	background: $white;
 }
 
-header,
-footer{
-	padding: 2.5rem 0;
+main > section{
+	padding: $spacing-unit 0;
 }
 
 h1{
-	font-size: 2rem;
+	text-align: center;
 }
 
 h2{
-	font-size: 1.5rem;
+	font-size: 2em;
 }
 
 h3{
-	font-size: 1.125rem;
+	font-size: 1.125em;
 }
 
 h4{
-	font-size: .75rem;
+	font-size: 1.25em;
+	line-height: 1.6em;
 }
 
 ul{
@@ -51,11 +51,6 @@ a{
 	text-decoration: none;
 	color: inherit;
 	display: inline-block;
-
-	&:hover,
-	&:focus{
-		color: darken($text-color, 15%);
-	}
 }
 
 input,
@@ -73,20 +68,8 @@ textarea{
 	width: 100%;
 	max-width: 100%;
 	padding: .5em 1em;
-	opacity: .75;
 	outline: none;
 	border: 2px solid white;
-
-		&:focus,
-		&:active,
-		&:hover{
-			opacity: 1;
-		}
-
-		&:active,
-		&:focus{
-			border-color: blue;
-		}
 }
 
 input[type="radio"],
@@ -97,16 +80,8 @@ input[type="checkbox"]{
 button,
 input[type="submit"],
 .button{
-	font-family: $font-alt;
-	font-style: italic;
-	font-weight: 500;
-	background: transparentize($black, .5);
-	color: inherit;
+	font-family: $font;
 	padding: .5em 1em;
-
-	&:hover{
-		background: transparentize($black, .75);
-	}
 
 	&:disabled{
 		opacity: .5;

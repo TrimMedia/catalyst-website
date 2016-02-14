@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="26px" viewBox="0 0 16 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 15</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Mobile" sketch:type="MSArtboardGroup" transform="translate(-24.000000, -1746.000000)" fill="#F58263">
+            <g id="body" sketch:type="MSLayerGroup" transform="translate(-11.000000, 574.000000)">
+                <g id="realtalk" transform="translate(11.000000, 1021.000000)" sketch:type="MSShapeGroup">
+                    <g id="arrows" transform="translate(22.000000, 149.000000)">
+                        <g id="Arrow-right" transform="translate(15.000000, 15.000000) scale(-1, 1) rotate(-225.000000) translate(-15.000000, -15.000000) translate(5.000000, 5.000000)">
+                            <path d="M1.00093617,1.35346327 C0.388164826,1.88596303 5.61328761e-13,2.67096648 5.61328761e-13,3.54644057 L5.61328761e-13,16.9985479 C5.61328761e-13,18.609286 1.29981847,19.9029576 2.90322581,19.9029576 C4.50337053,19.9029576 5.80645161,18.6026091 5.80645161,16.9985479 L5.80645161,6.09929347 L16.7798044,6.09929347 C18.37744,6.09929347 19.6774194,4.80578187 19.6774194,3.21015446 C19.6774194,1.61777382 18.380113,0.321015446 16.7798044,0.321015446 L3.22019556,0.321015446 C2.33038885,0.321015446 1.53291386,0.722257298 1.00093617,1.35346327 Z" id="Rectangle-15"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

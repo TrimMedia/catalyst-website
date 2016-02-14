@@ -16,7 +16,7 @@ textarea,
 select,
 option,
 button{
-	font-family: $font-default;
+	font-family: $font;
 	font-size: $font-size;
 	line-height:  $line-height;
 
@@ -40,5 +40,6 @@ input[type="submit"]{
 img{
 	max-width: 100%;
 	display: block;
+	margin: 0 auto;
 }
 

@@ -3,33 +3,38 @@ layout: default
 title: 'Inspired Workspaces'
 ---
 
-<header role="banner">
-	<a class="login-link" href="#">Member Login</a>
-	<h1 class="title">Catalyst</h1>
-	<h3 class="subtitle">Inspired Workpaces</h3>
-	<ul class="feature-list">
-		<li>Flexible, month-to-month coworking spaces</li>
-		<li>A diverse community of interesting, helpful entreprenuers</li>
-		<li>Resources to help you and your business grow</li>
+<header class="banner" role="banner">
+	<a class="btn btn--login" href="#">Member Login</a>
+	<h1 class="logo">
+		<img class="logo__img" src="/assets/img/catalyst-logo.svg" alt="Catalyst Inspired Workspaces">
+	</h1>
+	<ul class="list list--featured">
+		<li class="list__item">Flexible, month-to-month coworking spaces</li>
+		<li class="list__item">A diverse community of interesting, helpful entreprenuers</li>
+		<li class="list__item">Resources to help you and your business grow</li>
 	</ul>
-	<a class="button button--primary" href="#">Schedule a Tour</a>
+	<a class="btn btn--primary" href="#">Schedule a Tour</a>
 </header>
 
 <main role="main">
 	<section id="ammenities">
 		<h2 class="heading">Ammenities</h2>
-		<p>Included in all plans</p>
+		<p class="subheading">Included in all plans</p>
 		<ul class="ammenity-list">
-			<li class="ammenity-list__item">
-				<h4>Modern sunlit spaces</h4>
-				<p>A design-forward atmosphere with 20-foot exposed ceilings, glass and brick walls, and furniture that ranges from streamlined to funky to suite your diverse needs and moods. The workspace features an urban industrial design with 20-foot exposed ceilings with glass and brick walls. The light, airy space has both open and private workspace</p>
+			<li class="ammenity" style="background-image: url(/assets/img/sunlit.jpg)">
+				<div class="ammenity__overlay">
+					<h4 class="ammenity__title">Modern sunlit spaces</h4>
+					<p class="ammenity__info">A design-forward atmosphere with 20-foot exposed ceilings, glass and brick walls, and furniture that ranges from streamlined to funky to suite your diverse needs and moods. The workspace features an urban industrial design with 20-foot exposed ceilings with glass and brick walls. The light, airy space has both open and private workspace</p>
+				</div>
 			</li>
-			<li class="ammenity-list__item">
-				<h4>A diverse community</h4>
-				<p>Interesting, helpful people, and a culture of learning, challenge, sharing, and collaboration.</p>
+			<li class="ammenity ammenity--expanded" style="background-image: url(/assets/img/community.jpg)">
+				<div class="ammenity__overlay">
+					<h4 class="ammenity__title">A diverse community</h4>
+					<p class="ammenity__info">Interesting, helpful people, and a culture of learning, challenge, sharing, and collaboration.</p>
+				</div>
 			</li>
-			<li class="ammenity-list__item ammenity-list__item--small">
-				<h4>Receive Mail and Packages</h4>
+			<li class="ammenity ammenity--small">
+				<h4 class="ammenity__title">Receive Mail and Packages</h4>
 			</li>
 		</ul>
 	</section>
@@ -37,41 +42,66 @@ title: 'Inspired Workspaces'
 	<section id="realtalk">
 		<h2 class="heading">#realtalk</h2>
 		<ul class="quote-list">
-			<li class="quote-list__item">
-				<div class="avatar">
-					<img class="avatar__person" src="">
-					<img class="avatar__company" src="">
+			<div class="quote-nav">
+				<div class="quote-nav__left">
+					<img src="/assets/img/arrow-left.svg">
 				</div>
-				<h4 class="person">
-					Andrew Nater <span class="company">Trim Media</span>
+				<div class="quote-nav__right">
+					<img src="/assets/img/arrow-right.svg">
+				</div>
+			</div>
+			<li class="quote">
+				<div class="avatar">
+					<img class="avatar__person" src="/assets/img/person.png">
+					<img class="avatar__company" src="/assets/img/company.png">
+				</div>
+				<h4 class="quote__byline">
+					Andrew Nater <span class="quote__byline--company">Trim Media</span>
 				</h4>
-				<blockquote>
-					Catalyst is an incredible space to work in. The community alone is priceless
+				<blockquote class="quote__quote">
+					Catalyst is an incredible space to work in. The community alone is priceless. I won’t be looking for another space for a very long time.
 				</blockquote>
 			</li>
 		</ul>
-		<a class="button button--outline" href="#"></a>
+		<a class="btn btn--secondary" href="#">Join the Community</a>
 	</section>
 
 	<section id="memberships">
 		<h2 class="heading">Memberships</h2>
-		<p>Different spaces and prices depending on your needs</p>
-		<ul class="membership-list">
-			<li class="membership-list__item">
-				<header>
-					<h4>Community</h4>
-					<p>Shared •  5 days / mo</p>
+		<p class="subheading">Different spaces and prices<br>depending on your needs</p>
+		<ul class="card-list">
+			<li class="card">
+				<header class="card__header">
+					<h4 class="card__title">Community</h4>
+					<p class="card__subtitle">Shared •  5 days / mo</p>
 				</header>
-				<div class="details">
+				<div class="card__body card__body--hidden">
 					<p>You need a place to have occasional meetings and a mailing address to use for your business.</p>
-					<ul>
+					<ul class="card__body--list">
 						<li>10 hours/mo conference room access</li>
 						<li>Access to all <a href="#ammenities">ammenities</a></li>
 					</ul>
 				</div>
-				<footer>
-					<span class="price">$99/mo</span>
-					<button>Details</button>
+				<footer class="card__footer">
+					<span class="card__price">$99/mo</span>
+					<button class="card__btn">Details</button>
+				</footer>
+			</li>
+			<li class="card card--active">
+				<header class="card__header">
+					<h4 class="card__title">Coworker</h4>
+					<p class="card__subtitle">Shared •  Weekdays, 9a - 6p</p>
+				</header>
+				<div class="card__body">
+					<p>You need a regular place to work during the week but you’re pretty mobile and can set up shop at the drop of a dime. Cowork in the shared spaces for any and all weekdays of the month.</p>
+					<ul class="card__body--list">
+						<li>10 hours/mo conference room access</li>
+						<li>Access to all <a href="#ammenities">ammenities</a></li>
+					</ul>
+				</div>
+				<footer class="card__footer">
+					<span class="card__price">$99/mo</span>
+					<button class="card__btn card__btn--cta">Start Plan</button>
 				</footer>
 			</li>
 		</ul>
@@ -83,28 +113,28 @@ title: 'Inspired Workspaces'
 			The people.<br>
 			The resources.
 		</h2>
-		<p>Catalyst has what you need to improve yourself and your business.</p>
-		<a class="button button--primary" href="#">Schedule a Tour</a>
+		<p class="subheading">Catalyst has what you need to improve yourself and your business.</p>
+		<a class="btn btn--primary" href="#">Schedule a Tour</a>
 	</section>
 </main>
 
-<footer role="content-info">
-	<form class="newsletter">
-		<h2>Join Our Newsletter!</h2>
-		<input type="email" placeholder="Email Address">
-		<input type="submit" value="Join the Newsletter">
+<footer id="footer" role="content-info">
+	<form class="form">
+		<h2 class="heading heading--small">Join Our Newsletter!</h2>
+		<input class="form__input"type="email" placeholder="Email Address">
+		<input class="form__btn btn"type="submit" value="Join the Newsletter">
 	</form>
-	<address>
-		1 South Orange Ave.<br>
-		Fifth Floor<br>
+	<address class="footer__address">
+		1 South Orange Ave., Fifth Floor<br>
 		Orlando, FL 32801
 	</address>
-	<a href="mailto:info@catalystspaces.com">info@catalystspaces.com</a>
-	<ul>
-		<li><a href="#">Facebook</a></li>
-		<li><a href="#">Twitter</a></li>
-		<li><a href="#">Calendar</a></li>
+	<a class="footer__link" href="mailto:info@catalystspaces.com">info@catalystspaces.com</a>
+	<ul class="list--horizontal">
+		<li class="list__icon"><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+		<li class="list__icon"><a href="#"><i class="fa fa-twitter"></i></a></li>
+		<li class="list__icon"><a href="#"><i class="fa fa-instagram"></i></li>
+		<li class="list__icon"><a href="#"><i class="fa fa-calendar"></i></a></li>
 	</ul>
-	<span id="copyright">Catalyst Spaces 2016</span>
-	<a href="#">Website Credits</a>
+	<span class="footer__text--left" id="copyright">&copy; Catalyst Spaces 2016</span>
+	<a class="footer__text--right" href="#">Website Credits</a>
 </footer>	

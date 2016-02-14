@@ -2,24 +2,43 @@
 Settings 
 */
 
-// color //
-$bg-color: #fff;
-$text-color: #353535;
-
-$white: $bg-color;
-$black: $text-color;
-
 // size //
-$font-size: 20px;
-$line-height: 1.5em;
-$spacing-unit: 2em;
+$font-size: 16px;
+$line-height: 1.4em;
+$spacing-unit: 3.125rem;
 
 // fonts //
-$font-default: "ff-enzo-web",sans-serif;
-$font-alt: "Archer A", "Archer B";
+$font: "Avenir",sans-serif;
+
+// color //
+$white: #fff;
+
+$brick1: #F58263;
+$brick2: #F26436;
+$brick3: #EE4324;
+$brick4: #C42B2A;
+$brick5: #8E241E;
+
+$aqua1: #A0DBE3;
+$aqua2: #38C2D7;
+$aqua3: #15A6CD;
+$aqua4: #1D7589;
+$aqua5: #235762;
+
+$gray1: #C4D4D4;
+$gray2: #8AA2A4;
+$gray3: #6B7E82;
+$gray4: #475A60;
+$gray5: #223134;
+
+$wood1: #D7D6D2;
+$wood2: #CBC2BB;
+$wood3: #9A918C;
+$wood4: #736763;
+$wood5: #473E3D;
 
 // breakpoints //
-$tablet: 600px;
-$laptop: 900px;
-$desktop: 1200px;
-$big-desktop: 1500px;
+$tablet: 37.5em; // 600px //
+$laptop: 56.25em; // 900px //
+$desktop: 75em; // 1200px //
+$big-desktop: 93.75em; // 1500px //

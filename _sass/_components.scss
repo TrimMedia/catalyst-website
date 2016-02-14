@@ -2,7 +2,450 @@
 Components
 */
 
+.banner{
+	padding: $spacing-unit 0;
+	position: relative;
+	background: url(../assets/img/banner.jpg) center;
+	background-size: cover;
+	color: $wood1;
 
+	> *{
+		z-index: 1;
+	}
+}
+
+.btn{
+	border-radius: .1em;
+	padding: 1em;
+	border: .15em solid $white;
+	font-weight: 500;
+
+	&--primary{
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+		margin-top: $spacing-unit;
+		text-align: center;
+		font-size: 1.25em;
+		border: none;
+		background: $aqua1;
+		color: $aqua4;
+		text-transform: uppercase;
+		font-weight: 500;
+		letter-spacing: .2em;
+		box-shadow: 0 0 15px rgba(0,0,0,.15);
+	}
+
+	&--secondary{
+		margin-top: $spacing-unit/2;
+		width: 75%;
+		border-color: $brick1;
+	}
+
+	&--login{
+		position: absolute;
+		top: -.2em;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: .8;
+		padding: .5em .75em;
+		font-size: .75em;
+		border-color: transparentize($white, .5);
+	}
+}
+
+.logo{
+	margin-top: $spacing-unit/2;
+	&__img{
+		width: 90%;
+		min-width: 16rem;
+	}
+}
+
+.list{
+	&__item{
+		margin-bottom: $spacing-unit;
+
+		&::after{
+			content: '';
+			display: block;
+			position: relative;
+			width: 2.5em;
+			height: 3px;
+			background: #F26436;
+			top: $spacing-unit/2;
+			margin: 0 auto;
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		&:last-child::after{
+			display: none;
+		}
+	}
+
+	&--featured{
+		text-align: left;
+		margin: 0 auto;
+		margin-top: $spacing-unit;
+		font-size: 1.1em;
+		width: 78%;
+	}
+
+	&--horizontal{
+		margin-top: $spacing-unit/2;
+
+		> li{
+			display: inline-block;
+		}
+	}
+
+	&__icon{
+		color: $white;
+		font-size: 2rem;
+		margin-right: 1.5em;
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+
+#ammenities{
+	& .heading{
+		color: $brick3;
+	}
+	& .subheading{
+		color: $gray2;
+	}
+}
+
+.heading{
+	text-align: center;
+	font-size: 2rem;
+	line-height: 1.2em;
+	font-weight: bold;
+
+	&--small{
+		font-size: 1.25rem;
+	}
+}
+
+.subheading{
+	line-height: 1.5em;
+	margin-top: .5em;
+}
+
+.ammenity-list{
+	margin-top: $spacing-unit;
+	width: 100%;
+}
+
+.ammenity{
+	width: 95%;
+	margin: 0 auto 1rem;
+	border-radius: .15em;
+	color: $white;
+	text-shadow: 0px 2px 4px rgba(0,0,0,.5);
+	cursor: pointer;
+	transition: box-shadow .3s ease;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+
+	&__title{
+		z-index: 1;
+	}
+
+	&__info{
+		text-align: left;
+		max-height: 0;
+		overflow: hidden;
+		z-index: 1;
+		transition: max-height .3s ease;
+	}
+
+	&__overlay{
+		background: transparentize($aqua4, .5);
+		padding: 1em;
+	}
+
+	&--small{
+		font-size: .9rem;
+		padding: .5em;
+		background: transparentize($aqua4, .2);
+		cursor: default;
+		text-shadow: none;
+	}
+
+	&--expanded{ 
+		box-shadow: 0px 2px 10px rgba(0,0,0,.4);
+
+		& .ammenity__overlay{
+			background: transparentize($aqua4, .2);
+		}
+
+		& .ammenity__info{
+			max-height: 150px;
+		}
+	}
+}
+
+#realtalk{
+	background: $brick3;
+	color: $white;
+	text-align: center;
+}
+
+.quote-list{
+	position: relative;
+}
+
+.quote-nav{
+	position: absolute;
+	top: 2.5em;
+	width: 100%;
+
+	&__left{
+		position: absolute;
+		left: 6%;
+	}
+
+	&__right{
+		position: absolute;
+		right: 6%;
+	}
+}
+
+.quote{
+
+	&__byline{
+		font-weight: normal;
+		line-height: 1.5em;
+		margin-top: 1em;
+
+		&--company{
+			display: block;
+			opacity: .6;
+		}
+	}
+
+	&__quote{
+		line-height: 1.5em;
+		width: 75%;
+		margin: 0 auto;
+		padding: $spacing-unit/2 0;
+		background: url(../assets/img/quotes.svg) center no-repeat;
+		background-size: contain;
+	}
+}
+
+.avatar{
+	position: relative;
+	max-width: 7em;
+	margin: 0 auto;
+	margin-top: $spacing-unit/2;
+
+	&__person,
+	&__company{
+		border: .25em solid $brick1;
+		border-radius: 100%;
+		overflow: hidden;
+	}
+
+	&__person{
+		width: 100%;
+	}
+
+	&__company{
+		width: 50%;
+		position: absolute;
+		bottom: 0;
+		left: 75%;
+	}
+}
+
+#memberships{
+	background: $wood1;
+	& .heading{
+		color: $wood5
+	}
+	& .subheading{
+		color: $wood3;
+	}
+}
+
+.card-list{
+	margin-top: $spacing-unit;
+}
+
+.card{
+	width: 95%;
+	margin: 0 auto 1rem;
+	border-radius: .15em;
+	background: $white;
+	text-align: left;
+	transition: box-shadow .3s ease;
+
+	&--active{
+		box-shadow: 0px 2px 10px rgba(0,0,0,.3);
+	}
+
+	&__header,
+	&__body{
+		padding: 1.25rem;
+	}
+
+	&__title{
+		color: $brick3;
+		font-size: 1.25rem;
+		font-weight: 800;
+	}
+
+	&__subtitle{
+		color: $wood5;
+		font-size: .95em;
+	}
+
+	&__body{
+		color: $wood3;
+		padding-top: 0;
+		max-height: 15rem;
+		transition: max-height .2s ease;
+		overflow: hidden;
+
+		&--list{
+			margin-top: 1.25rem;
+			text-align: center;
+			color: $wood5;
+		}
+
+		&--hidden{
+			max-height: 0;
+			padding-bottom: 0;
+		}
+	}
+
+	&__footer{
+		text-align: center;
+		display: flex;
+	}
+
+	&__price,
+	&__btn{
+		display: inline-block;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 1.25rem;
+		border-top: 1px solid $wood1;
+	}
+
+	&__price{
+		width: 40%;
+		color: $aqua4;
+	}
+
+	&__btn{
+		width: 60%;
+		text-transform: uppercase;
+		letter-spacing: .2em;
+		background: $white;
+		color: $wood3;
+		border-left: 1px solid $wood1;
+
+		&--cta{
+			background: $aqua4;
+			color: $aqua1;
+			border: 0;
+			font-weight: 900;
+		}
+	}
+}
+
+#cta{
+	& .heading,
+	& .subheading{
+		text-align: left;
+		padding: 0 10%;
+	}
+	
+	& .heading{
+		color: $brick3;
+	}
+	& .subheading{
+		color: $gray2;
+	}
+}
+
+#footer{
+	background: url(../assets/img/brick.jpg) center;
+	background-size: cover;
+	color: $gray1;
+	padding: $spacing-unit 0;
+	position: relative;
+}
+
+.footer{
+
+	&__address{
+		margin-top: $spacing-unit/2;
+		font-style: normal;
+	}
+
+	&__link{
+		color: $white;
+		margin-top: $spacing-unit/2;
+	}
+
+	&__text{
+		&--left,
+		&--right{
+			position: absolute;
+			bottom: .5em;
+			font-size: .75em;
+		}
+
+		&--left{
+			left: .5em;
+		}
+
+		&--right{
+			right: .5em;
+		}
+	}
+}
+
+.form{
+	width: 70%;
+	margin: 0 auto;
+
+	&__heading{
+		font-size: 1.25rem;
+	}
+
+	&__input,
+	&__btn{
+		width: 100%;
+		text-align: center;
+		margin-top: .5em;
+	}
+
+	&__input{
+		color: $white;
+		background: rgba(255,255,255,.1);
+		border: 1px solid #979797;
+		border-radius: .1em;
+		margin-top: 1em;
+	}
+
+	&__btn{
+		color: $gray5;
+		background: rgba(255,255,255,.5);
+		box-shadow: 0px 2px 10px rgba(0,0,0,.2);
+	}
+}
 
 
 
