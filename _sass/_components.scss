@@ -180,11 +180,11 @@ Components
 	@include media-query($tablet) {
     	transform: scale(.99);
     	width: 20rem;
-    	max-width: 47.5%;
+    	max-width: 47%;
 	}
 
 	@include media-query($desktop) {
-    	max-width: 30%;
+    	max-width: 31%;
 	}
 
 	&__title{

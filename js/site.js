@@ -3,11 +3,13 @@ window.addEventListener('load', function(){
 		card = document.querySelectorAll('.card');
 
 	// add triggers to .ammenity elements
+	/*
 	for (var i = 0; i < ammenity.length; i++) {
 		if(!ammenity[i].classList.contains('ammenity--small')){
 			toggleClassTrigger('ammenity--expanded', ammenity[i], ammenity[i]);
 		}
 	};
+	*/
 
 	// add triggers to .card elements
 	for (var i = 0; i < card.length; i++) {
