@@ -8,6 +8,7 @@ Components
 	background: url(../assets/img/banner.jpg) center;
 	background-size: cover;
 	color: $wood1;
+	overflow: hidden;
 
 	> *{
 		z-index: 1;
@@ -23,6 +24,7 @@ Components
 	&--primary{
 		display: block;
 		width: 90%;
+		max-width: 32rem;
 		margin: 0 auto;
 		margin-top: $spacing-unit;
 		text-align: center;
@@ -39,6 +41,7 @@ Components
 	&--secondary{
 		margin-top: $spacing-unit/2;
 		width: 75%;
+		max-width: 32rem;
 		border-color: $brick1;
 	}
 
@@ -51,6 +54,13 @@ Components
 		padding: .5em .75em;
 		font-size: .75em;
 		border-color: transparentize($white, .5);
+		border-radius: .3em;
+
+		@include media-query($tablet){
+			left: auto;
+			right: -.2em;
+			transform: none;
+		}
 	}
 }
 
@@ -59,22 +69,25 @@ Components
 	&__img{
 		width: 90%;
 		min-width: 16rem;
+		max-width: 32rem;
+	}
+
+	@include media-query($tablet){
+		margin-top: 0;
 	}
 }
 
 .list{
-	&__item{
-		margin-bottom: $spacing-unit;
+	max-width: 25rem;
 
-		&::after{
-			content: '';
-			display: block;
-			position: relative;
-			width: 2.5em;
-			height: 3px;
-			background: #F26436;
-			top: $spacing-unit/2;
-			margin: 0 auto;
+	&__item{
+		margin-bottom: 2.5rem;
+		display: flex;
+		align-items: center;
+
+		> .fa{
+			color: $brick2;
+			margin-right: 1rem;
 		}
 
 		&:last-child{
@@ -139,24 +152,44 @@ Components
 }
 
 .ammenity-list{
-	margin-top: $spacing-unit;
 	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-top: $spacing-unit;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .ammenity{
-	width: 95%;
-	margin: 0 auto 1rem;
+	max-width: 95%;
+	width: 30rem;
+	height: 14rem;
 	border-radius: .15em;
 	color: $white;
 	text-shadow: 0px 2px 4px rgba(0,0,0,.5);
-	cursor: pointer;
-	transition: box-shadow .3s ease;
+	transition: .3s ease;
+	transition-property: box-shadow, transform;
 	background-position: center;
 	background-size: cover;
+	margin: .5rem;
+	display: flex;
 	overflow: hidden;
+
+	@include media-query($tablet) {
+    	transform: scale(.99);
+    	width: 20rem;
+    	max-width: 47.5%;
+	}
+
+	@include media-query($desktop) {
+    	max-width: 30%;
+	}
 
 	&__title{
 		z-index: 1;
+		line-height: 1.2em;
 	}
 
 	&__info{
@@ -164,23 +197,33 @@ Components
 		max-height: 0;
 		overflow: hidden;
 		z-index: 1;
-		transition: max-height .3s ease;
+		transition: .5s ease;
+		transition-property: max-height, opacity;
+		opacity: 0;
 	}
 
 	&__overlay{
 		background: transparentize($aqua4, .5);
+		transition: background .3s ease;
 		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	&--small{
+		height: auto;
 		font-size: .9rem;
 		padding: .5em;
 		background: transparentize($aqua4, .2);
 		cursor: default;
 		text-shadow: none;
+		justify-content: center;
 	}
 
-	&--expanded{ 
+	&--expanded,
+	&:hover{ 
+		transform: scale(1);
 		box-shadow: 0px 2px 10px rgba(0,0,0,.4);
 
 		& .ammenity__overlay{
@@ -188,7 +231,8 @@ Components
 		}
 
 		& .ammenity__info{
-			max-height: 150px;
+			max-height: 250px;
+			opacity: 1;
 		}
 	}
 }
@@ -220,7 +264,8 @@ Components
 }
 
 .quote{
-
+	max-width: 22rem;
+	margin: 0 auto;
 	&__byline{
 		font-weight: normal;
 		line-height: 1.5em;
@@ -278,19 +323,48 @@ Components
 }
 
 .card-list{
+	width: 90%;
+	max-width: 48rem;
+	margin: 0 auto;
 	margin-top: $spacing-unit;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .card{
 	width: 95%;
+	max-width: 20rem;
 	margin: 0 auto 1rem;
 	border-radius: .15em;
 	background: $white;
 	text-align: left;
-	transition: box-shadow .3s ease;
+	transition: .3s ease;
+	transition-property: box-shadow, transform;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
 
-	&--active{
-		box-shadow: 0px 2px 10px rgba(0,0,0,.3);
+	@include media-query($tablet){
+		width: auto;
+		margin: .5rem;
+		transform: scale(.99);
+
+		&:hover{
+			transform: scale(1);
+		}
+
+		&__header{
+			text-align: center;
+			font-size: 1.1em;
+		}
+	}
+
+	&--active,
+	&:hover{
+		box-shadow: 0px 2px 20px rgba(0,0,0,.15);
 	}
 
 	&__header,
@@ -298,9 +372,28 @@ Components
 		padding: 1.25rem;
 	}
 
+	&__header{
+		position: relative;
+	}
+
+	&__icon{
+		max-width: 2.5rem;
+		max-height: 1.5rem;
+		position: absolute;
+		top: 1.25rem;
+		right: 1.25rem;
+
+		@include media-query($tablet){
+			position: static;
+			max-width: 5rem;
+			max-height: 3rem;
+			margin-bottom: .5em;
+		}
+	}
+
 	&__title{
 		color: $brick3;
-		font-size: 1.25rem;
+		font-size: 1.25em;
 		font-weight: 800;
 	}
 
@@ -311,20 +404,31 @@ Components
 
 	&__body{
 		color: $wood3;
+		max-height: 0;
 		padding-top: 0;
-		max-height: 15rem;
-		transition: max-height .2s ease;
+		padding-bottom: 0;
+		transition: .4s ease-out;
+		transition-property: max-height, padding;
 		overflow: hidden;
 
 		&--list{
-			margin-top: 1.25rem;
+			margin: 1.25rem 0;
 			text-align: center;
 			color: $wood5;
 		}
 
-		&--hidden{
-			max-height: 0;
-			padding-bottom: 0;
+		&--expanded{
+			max-height: 15rem;
+		}
+
+		@include media-query($tablet){
+			max-height: none;
+			height: auto;
+			flex-grow: 1;
+
+			&--expanded{
+				max-height: none;
+			}
 		}
 	}
 
@@ -355,20 +459,43 @@ Components
 		color: $wood3;
 		border-left: 1px solid $wood1;
 
-		&--cta{
+		&--cta,
+		.card:hover &{
 			background: $aqua4;
 			color: $aqua1;
 			border: 0;
-			font-weight: 900;
+			font-weight: 700;
+		}
+
+		&--cta{
+			display: none;
+		}
+
+		@include media-query($tablet){
+			&--cta{
+				display: block;
+				background: $white;
+				color: $wood3;
+				border-top: 1px solid $wood1;
+				border-left: 1px solid $wood1;
+				font-weight: normal;
+			}
+			&--ancillary{
+				display: none;
+				visibility: hidden;
+			}
 		}
 	}
 }
 
 #cta{
+
 	& .heading,
 	& .subheading{
+		width: 80%;
 		text-align: left;
-		padding: 0 10%;
+		max-width: 32rem;
+		margin: 0 auto;
 	}
 	
 	& .heading{
@@ -383,15 +510,18 @@ Components
 	background: url(../assets/img/brick.jpg) center;
 	background-size: cover;
 	color: $gray1;
-	padding: $spacing-unit 0;
-	position: relative;
+	overflow: hidden;
+	max-width: 75rem;
+	margin: 0 auto;
 }
 
 .footer{
-
 	&__address{
 		margin-top: $spacing-unit/2;
 		font-style: normal;
+		@include media-query($laptop){
+			display: none;
+		}
 	}
 
 	&__link{
@@ -408,17 +538,60 @@ Components
 		}
 
 		&--left{
-			left: .5em;
+			left: 1.5em;
 		}
 
 		&--right{
-			right: .5em;
+			right: 1.5em;
+		}
+	}
+
+	&__container{
+		padding: $spacing-unit 0;
+		position: relative;
+	}
+
+	&__map{
+		display: none;
+	}
+
+	@include media-query($laptop){
+		&__container{
+			float: left;
+			width: 60%;
+		}
+		&__map{
+			display: flex;
+			float: left;
+			width: 40%;
+			position: relative;
+	        overflow: hidden;
+
+	        float: left;
+			width: 40%;
+			max-height: 100%;
+			height: 21rem;
 		}
 	}
 }
 
+.map{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+
+    &__container{
+    	width: 100%;
+		position: relative;
+    	padding-bottom: 40%; // This is the aspect ratio
+    }
+}
+
 .form{
 	width: 70%;
+	max-width: 28rem;
 	margin: 0 auto;
 
 	&__heading{
