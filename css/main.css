@@ -406,7 +406,8 @@ Components
   text-align: center; }
 
 .quote-list {
-  position: relative; }
+  position: relative;
+  margin-bottom: 1.5625rem; }
 
 .quote-nav {
   position: absolute;
@@ -420,8 +421,17 @@ Components
     right: 6%; }
 
 .quote {
+  width: 100%;
   max-width: 22rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  opacity: .2;
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: .8s ease;
+          transition: .8s ease;
+  -webkit-transition-property: opacity, -webkit-transform;
+          transition-property: opacity, transform; }
   .quote__byline {
     font-weight: normal;
     line-height: 1.5em;
@@ -436,6 +446,27 @@ Components
     padding: 1.5625rem 0;
     background: url(../assets/img/quotes.svg) center no-repeat;
     background-size: contain; }
+  .quote.is-selected {
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1); }
+
+.flickity-page-dots {
+  bottom: -2.5rem; }
+  .flickity-page-dots .dot {
+    background: #fff; }
+
+.flickity-prev-next-button {
+  width: 50px;
+  height: 100%;
+  background-color: none; }
+  .flickity-prev-next-button.previous {
+    background: url(../assets/img/arrow-left.svg) no-repeat center center; }
+  .flickity-prev-next-button.next {
+    background: url(../assets/img/arrow-right.svg) no-repeat center center; }
+  .flickity-prev-next-button .arrow, .flickity-prev-next-button.no-svg {
+    display: none; }
 
 .avatar {
   position: relative;

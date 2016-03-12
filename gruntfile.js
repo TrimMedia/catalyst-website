@@ -51,7 +51,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'css',
-                    src: 'main.css',
+                    src: ['main.css', 'flickity.css'],
                     dest: 'css',
                     ext: '.min.css'
                 }]

@@ -245,6 +245,7 @@ Components
 
 .quote-list{
 	position: relative;
+	margin-bottom: $spacing-unit/2;
 }
 
 .quote-nav{
@@ -264,8 +265,14 @@ Components
 }
 
 .quote{
+	width: 100%;
 	max-width: 22rem;
 	margin: 0 auto;
+	opacity: .2;
+	transform: scale(.9);
+	transition: .8s ease;
+	transition-property: opacity, transform;
+
 	&__byline{
 		font-weight: normal;
 		line-height: 1.5em;
@@ -284,6 +291,34 @@ Components
 		padding: $spacing-unit/2 0;
 		background: url(../assets/img/quotes.svg) center no-repeat;
 		background-size: contain;
+	}
+
+	&.is-selected{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.flickity-page-dots {
+	bottom:  -2.5rem;
+	& .dot{
+		background: #fff;
+	}
+}
+
+.flickity-prev-next-button {
+	width: 50px;
+	height: 100%;
+	background-color: none;
+	&.previous {
+		background: url(../assets/img/arrow-left.svg) no-repeat center center;
+	}
+	&.next {
+		background: url(../assets/img/arrow-right.svg) no-repeat center center;
+	}
+	& .arrow,
+	&.no-svg {
+		display: none;
 	}
 }
 
