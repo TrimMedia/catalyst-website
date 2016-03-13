@@ -23,121 +23,50 @@ title: 'Inspired Workspaces'
 </header>
 
 <main role="main">
-	<section id="ammenities">
-		<h2 class="heading">Ammenities</h2>
+	<section id="amenities">
+		<h2 class="heading">Amenities</h2>
 		<p class="subheading">Included in all plans</p>
-		<ul class="ammenity-list">
-			<li class="ammenity" style="background-image: url({{ site.baseurl }}/assets/img/sunlit.jpg)">
-				<div class="ammenity__overlay">
-					<h4 class="ammenity__title">Modern Sunlit Spaces</h4>
-					<p class="ammenity__info">A design-forward atmosphere with 20-foot exposed ceilings, glass and brick walls, and furniture that ranges from streamlined to funky to suite your diverse needs and moods.</p>
-				</div>
-			</li>
-			<li class="ammenity" style="background-image: url({{ site.baseurl }}/assets/img/community.jpg)">
-				<div class="ammenity__overlay">
-					<h4 class="ammenity__title">Events, Seminars,<br>& Parties</h4>
-					<p class="ammenity__info">Professional and social events that provide timely and relevant knowledge and resources and opportunities to meet both business connections and friends.</p>
-				</div>
-			</li>
-			<li class="ammenity" style="background-image: url({{ site.baseurl }}/assets/img/internet.jpg)">
-				<div class="ammenity__overlay">
-					<h4 class="ammenity__title">Super-fast Internet</h4>
-					<p class="ammenity__info">Fiber wifi and hardline connections available. We have a zero-outage record and our IT staff works onsite. We challenge you to a speed test!</p>
-				</div>
-			</li>
-			<li class="ammenity" style="background-image: url({{ site.baseurl }}/assets/img/specialty-rooms.jpg)">
-				<div class="ammenity__overlay">
-					<h4 class="ammenity__title">Conference Rooms<br>& Phone Booths</h4>
-					<p class="ammenity__info">At the Weekend-Only Membership Level and above, reserve our three technology-enabled conference rooms. All members have access to phone booths to have private phone calls.</p>
-				</div>
-			</li>
-			<li class="ammenity" style="background-image: url({{ site.baseurl }}/assets/img/banner.jpg)">
-				<div class="ammenity__overlay">
-					<h4 class="ammenity__title">Work Throughout Florida </h4>
-					<p class="ammenity__info">Catalyst membership automatically enrolls you into the Florida Coworking Passport, enabling you to spend one day per month for free at any FCP partner coworking space in Florida.</p>
-				</div>
-			</li>
-			<li class="ammenity" style="background-image: url({{ site.baseurl }}/assets/img/coffee-bar.jpg)">
-				<div class="ammenity__overlay">
-					<h4 class="ammenity__title">Craft Coffee Bar</h4>
-					<p class="ammenity__info">Free coffee ground fresh daily and single-origin coffees and imported loose-leaf teas sourced from Vespr, our partner Craft Coffeebar. Communal kitchen, fridge, and freezer + storage space.</p>
-				</div>
-			</li>
-			<li class="ammenity ammenity--small">
-				<h4 class="ammenity__title">Receive Mail and Packages</h4>
-			</li>
-			<li class="ammenity ammenity--small">
-				<h4 class="ammenity__title">Printer/Copies/Scanner</h4>
-			</li>
-			<li class="ammenity ammenity--small">
-				<h4 class="ammenity__title">Locker Space</h4>
-			</li>
+		<ul class="amenity-list">
+			{% for amenity in site.data.amenities %}
+				{% if amenity.info %}
+					<!-- example of amenity -->
+					<li class="amenity" 
+					    style="background-image: url({{ site.baseurl }}/assets/img/{{ amenity.img }}.jpg)">
+						<div class="amenity__overlay">
+							<h4 class="amenity__title">{{ amenity.title }}</h4>
+							<p class="amenity__info">{{ amenity.info }}</p>
+						</div>
+					</li>
+				{% else %}
+					<!-- example of small amenity -->
+					<li class="amenity amenity--small">
+						<h4 class="amenity__title">{{ amenity.title }}</h4>
+					</li>
+				{% endif %}
+			{% endfor %}
 		</ul>
 	</section>
 
 	<section id="realtalk">
 		<h2 class="heading">#realtalk</h2>
 		<ul class="quote-list">
-			<li class="quote">
-				<div class="avatar">
-					<img class="avatar__person" src="{{ site.baseurl }}/assets/img/person.png">
-					<img class="avatar__company" src="{{ site.baseurl }}/assets/img/company.png">
-				</div>
-				<h4 class="quote__byline">
-					Andrew Nater <span class="quote__byline--company">Trim Media</span>
-				</h4>
-				<blockquote class="quote__quote">
-					Catalyst is an incredible space to work in. The community alone is priceless. I won’t be looking for another space for a very long time.
-				</blockquote>
-			</li>
-			<li class="quote">
-				<div class="avatar">
-					<img class="avatar__person" src="{{ site.baseurl }}/assets/img/person.png">
-					<img class="avatar__company" src="{{ site.baseurl }}/assets/img/company.png">
-				</div>
-				<h4 class="quote__byline">
-					Andrew Nater <span class="quote__byline--company">Trim Media</span>
-				</h4>
-				<blockquote class="quote__quote">
-					Catalyst is an incredible space to work in. The community alone is priceless. I won’t be looking for another space for a very long time.
-				</blockquote>
-			</li>
-			<li class="quote">
-				<div class="avatar">
-					<img class="avatar__person" src="{{ site.baseurl }}/assets/img/person.png">
-					<img class="avatar__company" src="{{ site.baseurl }}/assets/img/company.png">
-				</div>
-				<h4 class="quote__byline">
-					Andrew Nater <span class="quote__byline--company">Trim Media</span>
-				</h4>
-				<blockquote class="quote__quote">
-					Catalyst is an incredible space to work in. The community alone is priceless. I won’t be looking for another space for a very long time.
-				</blockquote>
-			</li>
-			<li class="quote">
-				<div class="avatar">
-					<img class="avatar__person" src="{{ site.baseurl }}/assets/img/person.png">
-					<img class="avatar__company" src="{{ site.baseurl }}/assets/img/company.png">
-				</div>
-				<h4 class="quote__byline">
-					Andrew Nater <span class="quote__byline--company">Trim Media</span>
-				</h4>
-				<blockquote class="quote__quote">
-					Catalyst is an incredible space to work in. The community alone is priceless. I won’t be looking for another space for a very long time.
-				</blockquote>
-			</li>
-			<li class="quote">
-				<div class="avatar">
-					<img class="avatar__person" src="{{ site.baseurl }}/assets/img/person.png">
-					<img class="avatar__company" src="{{ site.baseurl }}/assets/img/company.png">
-				</div>
-				<h4 class="quote__byline">
-					Andrew Nater <span class="quote__byline--company">Trim Media</span>
-				</h4>
-				<blockquote class="quote__quote">
-					Catalyst is an incredible space to work in. The community alone is priceless. I won’t be looking for another space for a very long time.
-				</blockquote>
-			</li>
+			{% for quote in site.data.quotes %}
+				<li class="quote">
+					<div class="avatar">
+						<img class="avatar__person" 
+						     src="{{ site.baseurl }}/assets/img/{{ quote.av-person }}.jpg">
+						<img class="avatar__company" 
+						     src="{{ site.baseurl }}/assets/img/{{ quote.av-company }}.jpg">
+					</div>
+					<h4 class="quote__byline">
+						{{ quote.person }}
+						<span class="quote__byline--company">{{ quote.company }}</span>
+					</h4>
+					<blockquote class="quote__quote">
+						{{ quote.quote }}
+					</blockquote>
+				</li>
+			{% endfor %}
 		</ul>
 		<!--<a class="btn btn--secondary" href="#">Join the Community</a>-->
 	</section>
@@ -146,43 +75,30 @@ title: 'Inspired Workspaces'
 		<h2 class="heading">Memberships</h2>
 		<p class="subheading">Different spaces and prices<br>depending on your needs</p>
 		<ul class="card-list">
-			<li class="card">
-				<header class="card__header">
-					<img class="card__icon" src="{{ site.baseurl }}/assets/img/handshake.svg">
-					<h4 class="card__title">Community</h4>
-					<p class="card__subtitle">Shared •  5 days / mo</p>
-				</header>
-				<div class="card__body">
-					<p>You need a place to have occasional meetings and a mailing address to use for your business.</p>
-					<ul class="card__body--list">
-						<li>Access to all <a href="#ammenities">ammenities</a></li>
-					</ul>
-				</div>
-				<footer class="card__footer">
-					<span class="card__price">$99/mo</span>
-					<button class="card__btn card__btn--ancillary">Details</button>
-					<button class="card__btn card__btn--cta">Start Plan</button>
-				</footer>
-			</li>
-			<li class="card">
-				<header class="card__header">
-					<img class="card__icon" src="{{ site.baseurl }}/assets/img/suitcase.svg">
-					<h4 class="card__title">Coworker</h4>
-					<p class="card__subtitle">Shared •  Weekdays, 9a - 6p</p>
-				</header>
-				<div class="card__body">
-					<p>You need a regular place to work during the week but you’re pretty mobile and can set up shop at the drop of a dime. Cowork in the shared spaces for any and all weekdays of the month.</p>
-					<ul class="card__body--list">
-						<li>10 hours/mo conference room access</li>
-						<li>Access to all <a href="#ammenities">ammenities</a></li>
-					</ul>
-				</div>
-				<footer class="card__footer">
-					<span class="card__price">$99/mo</span>
-					<button class="card__btn card__btn--ancillary">Details</button>
-					<button class="card__btn card__btn--cta">Start Plan</button>
-				</footer>
-			</li>
+			{% for m in site.data.memberships %}
+				<li class="card">
+					<header class="card__header">
+						<img class="card__icon" src="{{ site.baseurl }}/assets/img/{{ m.icon }}.svg">
+						<h4 class="card__title">{{ m.title }}</h4>
+						<p class="card__subtitle">{{ m.subtitle }}</p>
+					</header>
+					<div class="card__body">
+						<p>{{ m.body }}</p>
+						{% if m.list %}
+							<ul class="card__body--list">
+								{% for item in m.list%}
+									<li>{{ item }}</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+					</div>
+					<footer class="card__footer">
+						<span class="card__price">{{ m.price }}</span>
+						<button class="card__btn card__btn--ancillary">Details</button>
+						<button class="card__btn card__btn--cta">Start Plan</button>
+					</footer>
+				</li>
+			{% endfor %}
 		</ul>
 	</section>
 

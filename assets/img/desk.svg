@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="69px" height="42px" viewBox="0 0 69 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-443.000000, -4518.000000)" fill="#473E3D">
+            <g id="body" transform="translate(-7.000000, 999.000000)">
+                <g id="membership" transform="translate(3.000000, 1941.000000)">
+                    <g id="Tiles" transform="translate(250.000000, 272.000000)">
+                        <g id="desk" transform="translate(0.000000, 1262.801636)">
+                            <g id="icon" transform="translate(197.000000, 43.000000)">
+                                <g id="Group" transform="translate(4.440823, 2.906983)">
+                                    <rect id="Rectangle-path" x="0.740137156" y="0" width="2.96054862" height="38.5175312"></rect>
+                                    <rect id="Rectangle-path" x="55.5102867" y="0" width="2.96054862" height="38.5175312"></rect>
+                                </g>
+                                <rect id="Rectangle-path" x="0" y="0.726745871" width="68.0926183" height="2.90698348"></rect>
+                                <path d="M62.7636308,16.1337583 L33.6022269,16.1337583 L33.6022269,0.872095045 L62.7636308,0.872095045 L62.7636308,16.1337583 L62.7636308,16.1337583 Z M36.5627755,13.2267748 L59.8030822,13.2267748 L59.8030822,3.77907853 L36.5627755,3.77907853 L36.5627755,13.2267748 L36.5627755,13.2267748 Z" id="Shape"></path>
+                                <path d="M62.7636308,28.343089 L33.6022269,28.343089 L33.6022269,13.0814257 L62.7636308,13.0814257 L62.7636308,28.343089 L62.7636308,28.343089 Z M36.5627755,25.4361055 L59.8030822,25.4361055 L59.8030822,15.9884092 L36.5627755,15.9884092 L36.5627755,25.4361055 L36.5627755,25.4361055 Z" id="Shape"></path>
+                                <rect id="Rectangle-path" x="45.2963939" y="6.97676036" width="5.92109725" height="2.90698348"></rect>
+                                <rect id="Rectangle-path" x="45.2963939" y="19.3314402" width="5.92109725" height="2.90698348"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -126,7 +126,7 @@ Components
 	}
 }
 
-#ammenities{
+#amenities{
 	& .heading{
 		color: $brick3;
 	}
@@ -151,7 +151,7 @@ Components
 	margin-top: .5em;
 }
 
-.ammenity-list{
+.amenity-list{
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -162,7 +162,7 @@ Components
 	justify-content: center;
 }
 
-.ammenity{
+.amenity{
 	max-width: 95%;
 	width: 30rem;
 	height: 14rem;
@@ -226,11 +226,11 @@ Components
 		transform: scale(1);
 		box-shadow: 0px 2px 10px rgba(0,0,0,.4);
 
-		& .ammenity__overlay{
+		& .amenity__overlay{
 			background: transparentize($aqua4, .2);
 		}
 
-		& .ammenity__info{
+		& .amenity__info{
 			max-height: 250px;
 			opacity: 1;
 		}
@@ -281,12 +281,14 @@ Components
 		&--company{
 			display: block;
 			opacity: .6;
+			font-size: .75em;
+    		line-height: 1.5em;
 		}
 	}
 
 	&__quote{
 		line-height: 1.5em;
-		width: 75%;
+		width: 80%;
 		margin: 0 auto;
 		padding: $spacing-unit/2 0;
 		background: url(../assets/img/quotes.svg) center no-repeat;
@@ -434,7 +436,7 @@ Components
 
 	&__subtitle{
 		color: $wood5;
-		font-size: .95em;
+		font-size: .8em;
 	}
 
 	&__body{

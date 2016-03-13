@@ -278,10 +278,10 @@ Components
     .list__icon:last-child {
       margin-right: 0; }
 
-#ammenities .heading {
+#amenities .heading {
   color: #EE4324; }
 
-#ammenities .subheading {
+#amenities .subheading {
   color: #8AA2A4; }
 
 .heading {
@@ -296,7 +296,7 @@ Components
   line-height: 1.5em;
   margin-top: .5em; }
 
-.ammenity-list {
+.amenity-list {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -318,7 +318,7 @@ Components
       -ms-flex-pack: center;
           justify-content: center; }
 
-.ammenity {
+.amenity {
   max-width: 95%;
   width: 30rem;
   height: 14rem;
@@ -338,19 +338,19 @@ Components
   display: flex;
   overflow: hidden; }
   @media screen and (min-width: 37.5em) {
-    .ammenity {
+    .amenity {
       -webkit-transform: scale(0.99);
           -ms-transform: scale(0.99);
               transform: scale(0.99);
       width: 20rem;
       max-width: 47%; } }
   @media screen and (min-width: 75em) {
-    .ammenity {
+    .amenity {
       max-width: 31%; } }
-  .ammenity__title {
+  .amenity__title {
     z-index: 1;
     line-height: 1.2em; }
-  .ammenity__info {
+  .amenity__info {
     text-align: left;
     max-height: 0;
     overflow: hidden;
@@ -360,7 +360,7 @@ Components
     -webkit-transition-property: max-height, opacity;
             transition-property: max-height, opacity;
     opacity: 0; }
-  .ammenity__overlay {
+  .amenity__overlay {
     background: rgba(29, 117, 137, 0.5);
     -webkit-transition: background .3s ease;
             transition: background .3s ease;
@@ -378,7 +378,7 @@ Components
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .ammenity--small {
+  .amenity--small {
     height: auto;
     font-size: .9rem;
     padding: .5em;
@@ -389,14 +389,14 @@ Components
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .ammenity--expanded, .ammenity:hover {
+  .amenity--expanded, .amenity:hover {
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1);
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4); }
-    .ammenity--expanded .ammenity__overlay, .ammenity:hover .ammenity__overlay {
+    .amenity--expanded .amenity__overlay, .amenity:hover .amenity__overlay {
       background: rgba(29, 117, 137, 0.8); }
-    .ammenity--expanded .ammenity__info, .ammenity:hover .ammenity__info {
+    .amenity--expanded .amenity__info, .amenity:hover .amenity__info {
       max-height: 250px;
       opacity: 1; }
 
@@ -438,10 +438,12 @@ Components
     margin-top: 1em; }
     .quote__byline--company {
       display: block;
-      opacity: .6; }
+      opacity: .6;
+      font-size: .75em;
+      line-height: 1.5em; }
   .quote__quote {
     line-height: 1.5em;
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
     padding: 1.5625rem 0;
     background: url(../assets/img/quotes.svg) center no-repeat;
@@ -577,7 +579,7 @@ Components
     font-weight: 800; }
   .card__subtitle {
     color: #473E3D;
-    font-size: .95em; }
+    font-size: .8em; }
   .card__body {
     color: #9A918C;
     max-height: 0;
