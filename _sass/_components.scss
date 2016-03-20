@@ -672,6 +672,10 @@ Components
 	}
 }
 
+#creditsTrigger{
+	cursor: pointer;
+}
+
 .map{
 	position: absolute;
     top: 0;
@@ -717,6 +721,54 @@ Components
 	}
 }
 
+.credits{
+	width: 90%;
+	max-width: 30rem;
+	max-height: 95vh;
+	background-color: #fff;
+	padding: $spacing-unit/2;
+	margin: auto;
+	border-radius: .1em;
+	box-shadow: 0 0 15px rgba(0,0,0,.15);
+	overflow: auto;
+	cursor: default;
+
+	&__overlay{
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0,0,0,.75);
+		display: flex;
+		flex-direction: column;
+		transition: opacity .3s ease-in-out;
+		opacity: 1;
+		cursor: pointer;
+	}
+
+	&__overlay--is-hidden{
+		pointer-events: none;
+		//display: none;
+		opacity: 0;
+	}
+
+	&__instruction{
+		margin: $spacing-unit/2 0;
+		color: white;
+	}
+
+	&__heading{
+		color: $brick3;
+		font-size: 2em;
+	}
+
+	&__subheading{
+		color: $gray2;
+		font-size: 1em;
+		margin-top: $spacing-unit/2;
+	}
+}
 
 
 

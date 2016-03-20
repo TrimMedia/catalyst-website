@@ -1,6 +1,8 @@
 window.addEventListener('load', function(){
 	var ammenity = document.querySelectorAll('.amenity'),
-		cards = document.querySelectorAll('.card');
+		cards = document.querySelectorAll('.card'),
+		creditsTrigger = document.querySelector('#creditsTrigger'),
+		credits = document.querySelector('.credits__overlay');
 
 	// add triggers to .ammenity elements
 	for (var i = 0; i < ammenity.length; i++) {
@@ -35,6 +37,17 @@ window.addEventListener('load', function(){
 			});
 		});
 	};// end of .card loop
+
+	// add trigger to show website credits
+	creditsTrigger.addEventListener('click', function(){
+		credits.classList.remove('credits__overlay--is-hidden');
+		credits.addEventListener('click', function(){
+			var target = event.target;
+			if(target.classList.contains('credits__overlay') || target.classList.contains('credits__instruction')){
+				this.classList.add('credits__overlay--is-hidden');
+			}
+		})
+	})
 });
 
 var toggleClassTrigger = function (newClass, element, trigger){
