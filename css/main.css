@@ -333,7 +333,8 @@ Components
   .list--horizontal {
     margin-top: 1.5625rem; }
     .list--horizontal > li {
-      display: inline-block; }
+      display: inline-block;
+      margin-top: 0; }
   .list__icon {
     color: #fff;
     font-size: 2rem;
@@ -759,6 +760,8 @@ Components
 .footer__link {
   color: #fff;
   margin-top: 1.5625rem; }
+  .footer__link + .footer__link {
+    margin-left: 1.5625rem; }
 
 .footer__text--left, .footer__text--right {
   position: absolute;

@@ -153,6 +153,7 @@ Components
 
 		> li{
 			display: inline-block;
+			margin-top: 0;
 		}
 	}
 
@@ -624,6 +625,10 @@ Components
 	&__link{
 		color: $white;
 		margin-top: $spacing-unit/2;
+
+		& + .footer__link{
+			margin-left: $spacing-unit/2;
+		}
 	}
 
 	&__text{
@@ -749,7 +754,6 @@ Components
 
 	&__overlay--is-hidden{
 		pointer-events: none;
-		//display: none;
 		opacity: 0;
 	}
 
