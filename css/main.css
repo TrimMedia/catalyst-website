@@ -713,7 +713,8 @@ Components
     color: #8AA2A4; }
 
 #footer {
-  background: url(../assets/img/brick.jpg) center;
+  background: url(../assets/img/brick.jpg) no-repeat;
+  background-position: center center;
   background-size: cover;
   color: #C4D4D4;
   overflow: hidden;

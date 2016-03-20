@@ -603,7 +603,8 @@ Components
 }
 
 #footer{
-	background: url(../assets/img/brick.jpg) center;
+	background: url(../assets/img/brick.jpg) no-repeat;
+	background-position: center center;
 	background-size: cover;
 	color: $gray1;
 	overflow: hidden;
