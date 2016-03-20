@@ -20,7 +20,7 @@ textarea,
 select,
 option,
 button {
-  font-family: "Avenir", sans-serif;
+  font-family: "Avenir", Avenir, sans-serif;
   font-size: 16px;
   line-height: 1.4em; }
   @media screen and (min-width: 56.25em) {
@@ -56,10 +56,38 @@ img {
 /* 
 Base 
 */
+@font-face {
+  font-family: 'Avenir';
+  src: url("Avenir-Book.eot");
+  src: local("Avenir Book"), local("Avenir-Book"), url("Avenir-Book.eot?#iefix") format("embedded-opentype"), url("Avenir-Book.woff") format("woff"), url("Avenir-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Avenir';
+  src: url("Avenir-Heavy.eot");
+  src: local("Avenir Heavy"), local("Avenir-Heavy"), url("Avenir-Heavy.eot?#iefix") format("embedded-opentype"), url("Avenir-Heavy.woff") format("woff"), url("Avenir-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Avenir';
+  src: url("Avenir-HeavyOblique.eot");
+  src: local("Avenir Heavy Oblique"), local("Avenir-HeavyOblique"), url("Avenir-HeavyOblique.eot?#iefix") format("embedded-opentype"), url("Avenir-HeavyOblique.woff") format("woff"), url("Avenir-HeavyOblique.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Avenir';
+  src: url("Avenir-BookOblique.eot");
+  src: local("Avenir Book Oblique"), local("Avenir-BookOblique"), url("Avenir-BookOblique.eot?#iefix") format("embedded-opentype"), url("Avenir-BookOblique.woff") format("woff"), url("Avenir-BookOblique.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
 html {
-  font-family: "Avenir", sans-serif;
+  font-family: "Avenir", Avenir, sans-serif;
   text-align: center;
-  font-weight: 500; }
+  font-weight: normal; }
 
 body {
   margin-top: 0;
@@ -120,7 +148,7 @@ input[type="checkbox"] {
 button,
 input[type="submit"],
 .button {
-  font-family: "Avenir", sans-serif;
+  font-family: "Avenir", Avenir, sans-serif;
   padding: .5em 1em; }
   button:disabled,
   input[type="submit"]:disabled,
@@ -734,7 +762,7 @@ Components
 
 .footer__text--left, .footer__text--right {
   position: absolute;
-  bottom: .5em;
+  bottom: 1em;
   font-size: .75em; }
 
 .footer__text--left {

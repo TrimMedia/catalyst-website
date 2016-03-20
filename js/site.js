@@ -41,7 +41,7 @@ window.addEventListener('load', function(){
 	// add trigger to show website credits
 	creditsTrigger.addEventListener('click', function(){
 		credits.classList.remove('credits__overlay--is-hidden');
-		credits.addEventListener('click', function(){
+		credits.addEventListener('click', function(event){
 			var target = event.target;
 			if(target.classList.contains('credits__overlay') || target.classList.contains('credits__instruction')){
 				this.classList.add('credits__overlay--is-hidden');
