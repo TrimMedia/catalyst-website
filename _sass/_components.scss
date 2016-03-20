@@ -1,15 +1,56 @@
 /* 
 Components
 */
+.video {
+	display: none;
+
+	&__container {
+		display: none;
+	}
+
+	@include media-query($laptop){
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		@media(min-aspect-ratio: 1920/800) {
+			height: 300%; 
+			top: -100%;
+		}
+		@media(max-aspect-ratio: 1920/800) {
+			width: 300%; 
+			left: -100%;
+		}
+
+		&__container {
+			display: block;
+			z-index: -10;
+			position: fixed;
+			top: 0; 
+			right: 0; 
+			bottom: 0; 
+			left: 0;
+			overflow: hidden;
+		}
+	}
+}
 
 .banner{
 	padding: $spacing-unit 0;
 	position: relative;
-	background: url(../assets/img/banner.jpg) center;
+	background: url(../assets/img/banner-mobile.jpg) center;
 	background-size: cover;
 	color: $wood1;
 	overflow: hidden;
 
+	@include media-query($laptop){
+		background-image: none;
+		background-color: transparentize($gray5,.3);
+	}
+	
 	> *{
 		z-index: 1;
 	}
@@ -127,6 +168,7 @@ Components
 }
 
 #amenities{
+	background: #fff;
 	& .heading{
 		color: $brick3;
 	}
@@ -543,7 +585,7 @@ Components
 }
 
 #cta{
-
+	background: #fff;
 	& .heading,
 	& .subheading{
 		width: 80%;
