@@ -13,7 +13,7 @@ title: 'Inspired Workspaces'
 			<i class="fa fa-plus"></i>Flexible, month-to-month coworking spaces
 		</li>
 		<li class="list__item">
-			<i class="fa fa-plus"></i>A diverse community of interesting, helpful entreprenuers
+			<i class="fa fa-plus"></i>A diverse community of interesting, helpful entrepreneurs
 		</li>
 		<li class="list__item">
 			<i class="fa fa-plus"></i>Resources to help you and your business grow
@@ -95,7 +95,7 @@ title: 'Inspired Workspaces'
 					<footer class="card__footer">
 						<span class="card__price">{{ m.price }}</span>
 						<button class="card__btn card__btn--ancillary">Details</button>
-						<button class="card__btn card__btn--cta">Start Plan</button>
+						<button class="card__btn card__btn--cta" data-link="{{ m.payment_link }}">Start Plan</button>
 					</footer>
 				</li>
 			{% endfor %}

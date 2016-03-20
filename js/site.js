@@ -1,41 +1,37 @@
 window.addEventListener('load', function(){
-	var ammenity = document.querySelectorAll('.ammenity'),
-		card = document.querySelectorAll('.card');
+	var ammenity = document.querySelectorAll('.amenity'),
+		cards = document.querySelectorAll('.card');
 
 	// add triggers to .ammenity elements
-	/*
 	for (var i = 0; i < ammenity.length; i++) {
-		if(!ammenity[i].classList.contains('ammenity--small')){
-			toggleClassTrigger('ammenity--expanded', ammenity[i], ammenity[i]);
+		if(!ammenity[i].classList.contains('amenity--small')){
+			toggleClassTrigger('amenity--expanded', ammenity[i], ammenity[i]);
 		}
 	};
-	*/
 
 	// add triggers to .card elements
-	for (var i = 0; i < card.length; i++) {
-		var btn = card[i].querySelector('.card__btn'),
-			body = card[i].querySelector('.card__body');
-
-		toggleClassTrigger('card--active', card[i], btn);
-		toggleClassTrigger('card__body--expanded', body, btn);
-		// replace button text, add --cta modifier, and listen for 2nd click
+	for (var i = 0; i < cards.length; i++) {
+		var card = cards[i],
+			btn = card.querySelector('.card__btn--ancillary'),
+			ctaBtn = card.querySelector('.card__btn--cta');
 		btn.addEventListener('click', function(){
-			//this.classList.add('card__btn--cta');
-			if(this.classList.contains('card__btn--ancillary')){
-				var parent = this.parentElement,
-					ctaBtn = parent.querySelector('.card__btn--cta');
-				this.style.display = "none";
-				ctaBtn.style.display = "block";
-			}
-			else{
-				//this.innerText = 'Details';
-			}
-			// TO DO: properly remove eventlisteners after first click 
-			//this.removeEventListener('click');
-			this.addEventListener('click', function(){
-				// take us to the proper purchase form
-				console.log('2nd click');
-				//document.location.href = 'http://google.com';
+			var el = event.target,
+				parent = el.parentElement.parentElement,
+				parentBtn = this,
+				parentCtaBtn = parent.querySelector('.card__btn--cta'),
+				parentHead = parent.querySelector('.card__header');
+			// add active class to card
+			parent.classList.add('card--active');
+			// swap anciallary and cta buttons
+			parentBtn.style.display = "none";
+			parentCtaBtn.style.display = "block";
+			// add event listener to collapse card
+			parentHead.addEventListener('click', function(){
+				// remove active class from card
+				parent.classList.remove('card--active');
+				// swap anciallary and cta buttons
+				parentBtn.style.display = "block";
+				parentCtaBtn.style.display = "none";
 			});
 		});
 	};// end of .card loop
@@ -45,6 +41,7 @@ var toggleClassTrigger = function (newClass, element, trigger){
 	var e = element,
 		t = trigger,
 		c = newClass;
+
 	t.addEventListener('click', function(){
 		e.classList.toggle(c);
 	});
