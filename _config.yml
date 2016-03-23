@@ -1,9 +1,16 @@
 # Site settings
-title: Catalyst
+title: Catalyst Spaces
+description: "Flexible, month-to-month coworking spaces. A diverse community of interesting, helpful entrepreneurs. Resources to help you and your business grow."
+image: "/assets/img/site-image.jpg"
+
 email: info@catalystspaces.com
-description: Promotional website for Catalyst Website
+twitter: catalystspaces
+facebook: catalystspaces
+instagram: catalyst_spaces
+
 baseurl: "/catalyst-website" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
+link: "http://catalystspaces.com"
 
 # Build settings
 markdown: kramdown

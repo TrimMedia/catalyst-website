@@ -1,10 +1,6 @@
 <footer id="footer" role="content-info">
 	<div class="footer__container">
-		<form class="form">
-			<h2 class="heading heading--small">Join Our Newsletter!</h2>
-			<input class="form__input"type="email" placeholder="Email Address">
-			<input class="form__btn btn"type="submit" value="Join the Newsletter">
-		</form>
+		{% include newsletter-form.html %}
 		<address class="footer__address">
 			1 South Orange Ave., Fifth Floor<br>
 			Orlando, FL 32801
@@ -26,9 +22,15 @@
 			</li>
 		</ul>
 		<ul class="list--horizontal">
-			<li class="list__icon"><a href="#"><i class="fa fa-facebook-official"></i></a></li>
-			<li class="list__icon"><a href="#"><i class="fa fa-twitter"></i></a></li>
-			<li class="list__icon"><a href="#"><i class="fa fa-instagram"></i></a></li>
+			<li class="list__icon">
+				<a href="https://www.facebook.com/catalystspaces"><i class="fa fa-facebook-official"></i></a>
+			</li>
+			<li class="list__icon">
+				<a href="https://twitter.com/catalystspaces"><i class="fa fa-twitter"></i></a>
+			</li>
+			<li class="list__icon">
+				<a href="https://www.instagram.com/catalyst_spaces"><i class="fa fa-instagram"></i></a>
+			</li>
 		</ul>
 		<span class="footer__text--left" id="copyright">&copy; Catalyst Spaces 2016</span>
 		<span class="footer__text--right" id="creditsTrigger">Website Credits</span>
