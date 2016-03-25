@@ -26,7 +26,7 @@ cta_link: 'https://app.acuityscheduling.com/schedule.php?owner=12094610&calendar
 			<i class="fa fa-plus"></i>Resources to help you and your business grow
 		</li>
 	</ul>
-	<a class="btn btn--primary" href="{{ page.cta_link }}" target="_blank">
+	<a class="btn btn--primary" href="{{ page.cta_link }}" target="_blank" id="firstCtaBtn">
 		Schedule a Tour
 	</a>
 </header>
@@ -104,7 +104,7 @@ cta_link: 'https://app.acuityscheduling.com/schedule.php?owner=12094610&calendar
 					<footer class="card__footer">
 						<span class="card__price">{{ m.price }}</span>
 						<button class="card__btn card__btn--ancillary">Details</button>
-						<button class="card__btn card__btn--cta" data-link="{{ m.payment_link }}">Start Plan</button>
+						<a class="card__btn card__btn--cta" href="{{ m.payment_link }}" target="_blank" data-plan="{{ m.title }}">Start Plan</a>
 					</footer>
 				</li>
 			{% endfor %}
@@ -118,7 +118,7 @@ cta_link: 'https://app.acuityscheduling.com/schedule.php?owner=12094610&calendar
 			The resources.
 		</h2>
 		<p class="subheading">Catalyst has what you need to improve yourself and your business.</p>
-		<a class="btn btn--primary" href="{{ page.cta_link }}" target="_blank">
+		<a class="btn btn--primary" href="{{ page.cta_link }}" target="_blank" id="secondCtaBtn">
 			Schedule a Tour
 		</a>
 	</section>
