@@ -104,7 +104,11 @@ cta_link: 'https://app.acuityscheduling.com/schedule.php?owner=12094610&calendar
 					<footer class="card__footer">
 						<span class="card__price">{{ m.price }}</span>
 						<button class="card__btn card__btn--ancillary">Details</button>
-						<a class="card__btn card__btn--cta" href="{{ m.payment_link }}" target="_blank" data-plan="{{ m.title }}">Start Plan</a>
+						{% if m.alt_cta %}
+							<a class="card__btn card__btn--cta" href="{{ m.alt_cta_link }}" target="_blank" data-plan="{{ m.title }}">{{ m.alt_cta }}</a>
+						{% else %}
+							<a class="card__btn card__btn--cta" href="{{ m.payment_link }}" target="_blank" data-plan="{{ m.title }}">Start Plan</a>
+						{% endif %}
 					</footer>
 				</li>
 			{% endfor %}
