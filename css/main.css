@@ -445,12 +445,13 @@ Components
             transition: .5s ease;
     -webkit-transition-property: max-height, opacity;
             transition-property: max-height, opacity;
-    opacity: 0; }
+    opacity: 0;
+    margin-top: .5em; }
   .amenity__overlay {
     background: rgba(29, 117, 137, 0.5);
     -webkit-transition: background .3s ease;
             transition: background .3s ease;
-    padding: 1em;
+    padding: .5em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -475,6 +476,11 @@ Components
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    .amenity--small:hover {
+      -webkit-transform: scale(0.99);
+          -ms-transform: scale(0.99);
+              transform: scale(0.99);
+      box-shadow: none; }
   .amenity--expanded {
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
