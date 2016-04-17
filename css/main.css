@@ -515,15 +515,17 @@ Components
 .quote {
   width: 100%;
   max-width: 22rem;
-  margin: 0 auto;
-  opacity: .2;
-  -webkit-transform: scale(0.9);
-      -ms-transform: scale(0.9);
-          transform: scale(0.9);
-  -webkit-transition: .8s ease;
-          transition: .8s ease;
-  -webkit-transition-property: opacity, -webkit-transform;
-          transition-property: opacity, transform; }
+  margin: 0 auto; }
+  @media screen and (min-width: 37.5em) {
+    .quote {
+      opacity: .2;
+      -webkit-transform: scale(0.8);
+          -ms-transform: scale(0.8);
+              transform: scale(0.8);
+      -webkit-transition: .8s ease;
+              transition: .8s ease;
+      -webkit-transition-property: opacity, -webkit-transform;
+              transition-property: opacity, transform; } }
   .quote__byline {
     font-weight: normal;
     line-height: 1.5em;
@@ -552,7 +554,7 @@ Components
     background: #fff; }
 
 .flickity-prev-next-button {
-  width: 50px;
+  width: 30px;
   height: 100%;
   background-color: none; }
   .flickity-prev-next-button.previous {
@@ -561,6 +563,9 @@ Components
     background: url(../assets/img/arrow-right.svg) no-repeat center center; }
   .flickity-prev-next-button .arrow, .flickity-prev-next-button.no-svg {
     display: none; }
+  @media screen and (min-width: 37.5em) {
+    .flickity-prev-next-button {
+      width: 200px; } }
 
 .avatar {
   position: relative;
