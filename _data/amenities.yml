@@ -14,13 +14,13 @@
   info: 'At the Weekend-Only Membership Level and above, reserve our three technology-enabled conference rooms. All members have access to phone booths to have private phone calls.'
   img: specialty-rooms
 
-- title: 'Work Throughout Florida'
-  info: 'Catalyst membership automatically enrolls you into the Florida Coworking Passport, enabling you to spend one day per month for free at any FCP partner coworking space in Florida.'
-  img: work-fl
-
 - title: 'Craft Coffee Bar'
   info: 'Free coffee ground fresh daily and single-origin coffees and imported loose-leaf teas sourced from Vespr, our partner Craft Coffeebar. Communal kitchen, fridge, and freezer + storage space.'
   img: coffee-bar
+
+- title: 'Work Throughout Florida'
+  info: 'Catalyst membership automatically enrolls you into the Florida Coworking Passport, enabling you to spend one day per month for free at any FCP partner coworking space in Florida.'
+  img: work-fl
 
 - title: 'Receive Mail and Packages'
 
