@@ -8,4 +8,24 @@ Trumps & Hacks
 
 .u-hidden{
 	display: none;
+	@include media-query($tablet){
+		&--tablet{
+			display: none;
+		}
+	}
+	@include media-query($laptop){
+		&--laptop{
+			display: none;
+		}
+	}
+	@include media-query($desktop){
+		&--desktop{
+			display: none;
+		}
+	}
+	@include media-query($big-desktop){
+		&--desktop2{
+			display: none;
+		}
+	}
 }

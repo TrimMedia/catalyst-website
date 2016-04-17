@@ -905,3 +905,15 @@ Trumps & Hacks
 
 .u-hidden {
   display: none; }
+  @media screen and (min-width: 37.5em) {
+    .u-hidden--tablet {
+      display: none; } }
+  @media screen and (min-width: 56.25em) {
+    .u-hidden--laptop {
+      display: none; } }
+  @media screen and (min-width: 75em) {
+    .u-hidden--desktop {
+      display: none; } }
+  @media screen and (min-width: 93.75em) {
+    .u-hidden--desktop2 {
+      display: none; } }
