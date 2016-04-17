@@ -1,9 +1,7 @@
 module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
-    // 1. All configuration goes here 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
         shell: {
             jekyllBuild: {
                 command: 'jekyll build'
@@ -14,7 +12,7 @@ module.exports = function(grunt) {
         },
         watch: {
             scripts: {
-                files: ['_sass/*.scss'],
+                files: ['_sass/*.scss', 'js/*.js'],
                 tasks: 'default'
             } 
         },
@@ -31,10 +29,18 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: '_sass/',
                     src: ['**/*.{scss,sass}'],
-                    dest: 'css',
+                    dest: 'css/src',
                     ext: '.css'
                 }]
             }
+        },
+        concat: {
+            dist: {
+                files: {
+                    'js/catalyst.js' : ['js/src/flickity.pkgd.min.js', 'js/src/site.js'],
+                    'css/catalyst.css' : ['css/src/flickity.css', 'css/src/main.css'],
+                }
+            },
         },
         autoprefixer: {
             options: {
@@ -42,7 +48,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'css/main.css': 'css/main.css'
+                    'css/catalyst.css': 'css/catalyst.css'
                 }
             }
         },
@@ -51,10 +57,17 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'css',
-                    src: ['main.css', 'flickity.css'],
+                    src: 'catalyst.css',
                     dest: 'css',
                     ext: '.min.css'
                 }]
+            }
+        },
+        uglify: {
+            my_target: {
+                files: {
+                    'js/catalyst.min.js': ['js/catalyst.js']
+                }
             }
         },
         concurrent: {
@@ -78,8 +91,10 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'shell:jekyllBuild',
         'sass',
+        'concat',
         'autoprefixer',
-        'cssmin'
+        'cssmin',
+        'uglify'
     ]);
 
     // Register build as the default task fallback
