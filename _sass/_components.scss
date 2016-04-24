@@ -48,7 +48,7 @@ Components
 
 	@include media-query($laptop){
 		background-image: none;
-		background-color: transparentize($gray5,.3);
+		background-color: transparentize($gray5, .15);
 	}
 	
 	> *{
@@ -78,12 +78,11 @@ Components
 		letter-spacing: .2em;
 		box-shadow: 0 0 15px rgba(0,0,0,.15);
 		transition: .3s ease;
-		transition-property: color, box-shadow, background-color, transform;
+		transition-property: color, box-shadow, background-color;
 
 		&:hover{
 			background: $brick1;
 			color: $brick5;
-			transform: scale(1.05);
 			box-shadow: 0 8px 20px rgba(0,0,0,.15);
 		}
 	}

@@ -246,7 +246,7 @@ Components
   @media screen and (min-width: 56.25em) {
     .banner {
       background-image: none;
-      background-color: rgba(34, 49, 52, 0.7); } }
+      background-color: rgba(34, 49, 52, 0.85); } }
   .banner > * {
     z-index: 1; }
 
@@ -271,11 +271,10 @@ Components
     letter-spacing: .2em;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     transition: .3s ease;
-    transition-property: color, box-shadow, background-color, transform; }
+    transition-property: color, box-shadow, background-color; }
     .btn--primary:hover {
       background: #F58263;
       color: #8E241E;
-      transform: scale(1.05);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); }
   .btn--secondary {
     margin-top: 1.5625rem;
