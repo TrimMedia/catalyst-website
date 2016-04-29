@@ -571,7 +571,7 @@ Components
           opacity: 1; } }
   @media screen and (min-width: 75em) {
     .amenity {
-      max-width: 31%; } }
+      height: 16em; } }
   .amenity__title {
     z-index: 1;
     line-height: 1.2em; }

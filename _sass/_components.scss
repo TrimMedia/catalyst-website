@@ -248,7 +248,7 @@ Components
 	}
 
 	@include media-query($desktop) {
-    	max-width: 31%;
+    	height: 16em;
 	}
 
 	&__title{
