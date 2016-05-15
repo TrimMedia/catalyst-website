@@ -601,7 +601,7 @@ Components
       text-align: center;
       color: #473E3D; }
     .card--active .card__body {
-      max-height: 15rem; }
+      max-height: 20rem; }
     @media screen and (min-width: 37.5em) {
       .card__body {
         max-height: none;
